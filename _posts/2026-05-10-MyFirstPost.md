@@ -1,8 +1,8 @@
 ---
-layout:post
-title:"MyFirstPost"
-data:2026-05-10
-author:summerTBD
+layout: post
+title: "MyFirstPost"
+date: 2026-05-10
+author: summerTBD
 ---
 
 # 我的第一篇博客
