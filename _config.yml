@@ -1,8 +1,9 @@
 # 复制这一行即可，这是 GitHub 官方默认主题
-theme: minima
+theme: midnight
 future: true
 
 # 你也可以换成其他官方主题，二选一：
+# theme: minima
 # theme: cayman
 # theme: midnight
 # theme: hacker
