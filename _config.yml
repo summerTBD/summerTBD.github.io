@@ -1,5 +1,5 @@
 # ============================================================
-# Chirpy 主题配置
+# Chirpy 主题配置 (v7.x)
 # 主题：cotes2020/jekyll-theme-chirpy
 # ============================================================
 theme: jekyll-theme-chirpy
@@ -20,7 +20,7 @@ baseurl: ""
 # 主题外观
 # ============================================================
 theme_mode: light   # light | dark | auto
-avatar: ""          # 头像图片 URL
+avatar: ""
 
 # ============================================================
 # 社交链接
@@ -32,20 +32,10 @@ social:
     - https://github.com/summerTBD
 
 # ============================================================
-# 文章相关
+# 文章参数
 # ============================================================
-# 文章路径
 permalink: /posts/:title/
-
-# 分页
 paginate: 10
-
-# 是否显示目录
-toc: true
-
-# 评论系统（可选）
-comments:
-  provider: ""
 
 # ============================================================
 # 默认 Front Matter
@@ -60,47 +50,9 @@ defaults:
       toc: true
 
 # ============================================================
-# 插件
-# ============================================================
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-archives
-  - jekyll-redirect-from
-
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive
-    tag: archive
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-
-# ============================================================
 # 构建配置
 # ============================================================
 future: true
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
 
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
-sass:
-  style: compressed
-
-exclude:
-  - .jekyll-cache
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+# Chirpy 会自动处理插件，不需要手动声明
+# markdown, kramdown, sass 等 Chirpy 也会自动配置
