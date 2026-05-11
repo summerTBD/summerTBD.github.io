@@ -1,62 +1,45 @@
-# Chirpy 主题官方部署工作流
-# 当推送到 main 分支时，自动构建 Jekyll 站点并部署到 GitHub Pages
-#
-# ⚠️ 已知问题（VS Code 本地报错，不影响运行）：
-# 在 WSL2 环境下，若 Windows 主机开启了代理/翻墙软件（如 Clash、v2ray 等），
-# 该软件会拦截 api.github.com 的 HTTPS 请求并用自签名证书进行解密，
-# 导致 VS Code 的 GitHub Actions 扩展在本地验证时提示：
-#   "Unable to resolve action `actions/checkout@v4`"
-#   "unable to verify the first certificate"
-# 这是本地证书验证问题，workflow 推送到 GitHub 后可以正常运行，无需修改。
-name: "Deploy Chirpy"
+# Minimal Mistakes 主题部署工作流
+# 推送到 main 分支时，自动构建 Jekyll 站点并部署到 GitHub Pages
+name: "Deploy Minimal Mistakes"
 
-# 触发条件：推送到 main 分支 或 手动触发
 on:
   push:
     branches: ["main"]
-  workflow_dispatch: # 允许在 GitHub 仓库 Actions 页面手动运行
+  workflow_dispatch:
 
-# 权限设置（GitHub Pages 部署需要这些权限）
 permissions:
-  contents: read # 读取仓库内容
-  pages: write # 写入 GitHub Pages
-  id-token: write # 获取 OIDC token
+  contents: read
+  pages: write
+  id-token: write
 
-# 并发控制：同一时间只允许一个部署任务运行
 concurrency:
   group: "pages"
-  cancel-in-progress: false # 不取消正在运行的任务，等它完成
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 步骤1：检出仓库代码（把代码下载到 runner 上）
       - uses: actions/checkout@v4
 
-      # 步骤2：搭建 Ruby 环境（Jekyll 基于 Ruby）
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3" # 指定 Ruby 版本
-          bundler-cache: true # 缓存 bundle 安装的 gems，加快后续构建
+          ruby-version: "3.3"
+          bundler-cache: true
 
-      # 步骤3：配置 GitHub Pages 设置（获取 base URL 等信息）
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      # 步骤4：构建 Jekyll 站点（生成静态网站文件）
       - name: Build site
         run: bundle exec jekyll build -d "_site${{ steps.pages.outputs.base_path }}"
         env:
-          JEKYLL_ENV: "production" # 生产环境构建
+          JEKYLL_ENV: "production"
 
-      # 步骤5：上传构建产物（将 _site 目录打包上传）
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-      # 步骤6：部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

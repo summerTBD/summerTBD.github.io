@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "MyFirstPost"
 date: 2026-05-10 00:00:00 +0800
 author: summerTBD

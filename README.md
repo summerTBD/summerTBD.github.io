@@ -1,3 +1,7 @@
 欢迎来到我的博客！这里记录我的学习和生活~
 
 👉 下方是我的文章列表，也可以点顶部导航访问「关于我」页面。
+
+---
+
+本博客使用 [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) Jekyll 主题。

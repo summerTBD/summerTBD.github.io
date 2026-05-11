@@ -1,8 +1,7 @@
 ---
-layout: page
-icon: fas fa-info-circle
+layout: single
 title: 关于
-order: 5
+permalink: /about/
 ---
 
 # 👋 你好，我是 summerTBD
