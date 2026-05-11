@@ -1,2 +1,18 @@
+# 当前使用的主题（取消注释你想要的，注释掉当前这行即可切换）
 remote_theme: pages-themes/midnight@v0.2.0
+
+# 其他官方主题，想换的话把上面的注释掉，取消注释下面某一行的注释即可：
+# remote_theme: pages-themes/minima@v0.2.0
+# remote_theme: pages-themes/cayman@v0.2.0
+# remote_theme: pages-themes/hacker@v0.2.0
+# remote_theme: pages-themes/slate@v0.2.0
+# remote_theme: pages-themes/merlot@v0.2.0
+# remote_theme: pages-themes/modernist@v0.2.0
+# remote_theme: pages-themes/architect@v0.2.0
+# remote_theme: pages-themes/leap-day@v0.2.0
+# remote_theme: pages-themes/tactile@v0.2.0
+# remote_theme: pages-themes/dinky@v0.2.0
+# remote_theme: pages-themes/time-machine@v0.2.0
+# remote_theme: pages-themes/contrast@v0.2.0
+
 future: true
