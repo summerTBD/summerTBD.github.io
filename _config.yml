@@ -2,7 +2,7 @@
 # Chirpy 主题配置
 # 主题：cotes2020/jekyll-theme-chirpy
 # ============================================================
-remote_theme: cotes2020/jekyll-theme-chirpy
+theme: jekyll-theme-chirpy
 
 # ============================================================
 # 站点基本信息
@@ -14,6 +14,7 @@ tagline: 记录我的学习和生活
 description: >-
   summerTBD 的技术博客，记录算法学习与编程思考
 url: "https://summerTBD.github.io"
+baseurl: ""
 
 # ============================================================
 # 主题外观
