@@ -16,10 +16,13 @@ description: >-
 url: "https://summerTBD.github.io"
 baseurl: ""
 
+github:
+  username: summerTBD
+
 # ============================================================
 # 主题外观
 # ============================================================
-theme_mode: light   # light | dark | auto
+theme_mode: light # light | dark | auto
 avatar: ""
 
 # ============================================================
@@ -32,10 +35,42 @@ social:
     - https://github.com/summerTBD
 
 # ============================================================
+# 站点验证
+# ============================================================
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
+
+# ============================================================
 # 文章参数
 # ============================================================
 permalink: /posts/:title/
 paginate: 10
+
+# ============================================================
+# 预览图 / TOC
+# ============================================================
+toc: true
+
+# ============================================================
+# 评论系统
+# ============================================================
+comments:
+  provider: # [disqus | utterances | giscus]
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
 
 # ============================================================
 # 默认 Front Matter
@@ -48,11 +83,83 @@ defaults:
       layout: post
       comments: true
       toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+# ============================================================
+# Jekyll 插件（关键修复！Chirpy 必需）
+# ============================================================
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+# ============================================================
+# 集合配置（Chirpy 必需）
+# ============================================================
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 # ============================================================
 # 构建配置
 # ============================================================
 future: true
 
-# Chirpy 会自动处理插件，不需要手动声明
-# markdown, kramdown, sass 等 Chirpy 也会自动配置
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - package*.json
+
+# ============================================================
+# 分类/标签归档
+# ============================================================
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
