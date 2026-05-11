@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Understanding of Sweep Line Algorithm"
-date: 2026-05-11
+date: 2026-05-11 00:00:00 +0800
 author: summerTBD
+categories: [算法]
+tags: [算法, 扫描线, C++]
+math: true
 ---
 
 > 本文同时提供中文版和 English Version。

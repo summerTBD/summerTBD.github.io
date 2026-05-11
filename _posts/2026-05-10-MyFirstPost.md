@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "MyFirstPost"
-date: 2026-05-10
+date: 2026-05-10 00:00:00 +0800
 author: summerTBD
+categories: [生活]
+tags: [日常, 博客]
 ---
 
 # 我的第一篇博客
@@ -10,7 +12,7 @@ author: summerTBD
 
 ## 今天做了什么
 1.  搞定了 GitHub Pages 部署
-2.  启用了 minima 主题
+2.  启用了 Chirpy 主题
 3.  学会了用 Markdown 写文章
 
 > 接下来要在这里记录学习和生活啦~
