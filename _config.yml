@@ -104,6 +104,7 @@ future: true
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
+  math_engine: mathjax
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: highlight
