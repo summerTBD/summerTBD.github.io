@@ -1,3 +1,13 @@
+{% comment %}
+本文件是 Minimal Mistakes 主题的自定义 head 片段。
+当 _config.yml 中配置了 kramdown: math_engine: mathjax 且
+文章 Front Matter 中设置了 math: true 时，本文件负责注入
+MathJax CDN 脚本，使浏览器能够渲染文章中的 LaTeX 数学公式。
+
+创建原因：Minimal Mistakes (iBug fork) 主题不会自动加载
+MathJax 的 JavaScript，需要手动注入。
+{% endcomment %}
+
 {% if page.math %}
 <!-- MathJax 数学公式渲染 -->
 <script>
