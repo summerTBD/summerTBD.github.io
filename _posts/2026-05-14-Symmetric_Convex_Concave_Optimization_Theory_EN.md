@@ -118,10 +118,10 @@ Then there exists $t \in \mathbb{R}$ such that $(t, t, \dots, t) \in \mathbb{R}^
 
 #### Proof Sketch
 
-Let $\mathbf{x}^* = (x_1^*, x_2^*, \dots, x_n^*)$ be a global minimizer of $F$ with value $m$. Consider all points obtained by permuting the coordinates:
+Let $\mathbf{x}^\ast = (x_1^\ast, x_2^\ast, \dots, x_n^\ast)$ be a global minimizer of $F$ with value $m$. Consider all points obtained by permuting the coordinates:
 
 $$
-\mathbf{x}_\sigma = (x_{\sigma(1)}^*, x_{\sigma(2)}^*, \dots, x_{\sigma(n)}^*), \quad \sigma \in S_n.
+\mathbf{x}_\sigma = (x_{\sigma(1)}^\ast, x_{\sigma(2)}^\ast, \dots, x_{\sigma(n)}^\ast), \quad \sigma \in S_n.
 $$
 
 By symmetry, each $\mathbf{x}_\sigma$ is a minimizer with value $m$. The set of minimizers of a convex function is convex, so their arithmetic mean
@@ -133,10 +133,10 @@ $$
 is also a minimizer. It is easy to verify that all coordinates of this mean are equal to the arithmetic mean of the original coordinates:
 
 $$
-\left( \frac{1}{n} \sum_{i=1}^n x_i^*,\; \frac{1}{n} \sum_{i=1}^n x_i^*,\; \dots,\; \frac{1}{n} \sum_{i=1}^n x_i^* \right).
+\left( \frac{1}{n} \sum_{i=1}^n x_i^\ast,\; \frac{1}{n} \sum_{i=1}^n x_i^\ast,\; \dots,\; \frac{1}{n} \sum_{i=1}^n x_i^\ast \right).
 $$
 
-Thus $t = \frac{1}{n} \sum_{i=1}^n x_i^*$ gives a diagonal minimizer $(t, t, \dots, t)$. $\square$
+Thus $t = \frac{1}{n} \sum_{i=1}^n x_i^\ast$ gives a diagonal minimizer $(t, t, \dots, t)$. $\square$
 
 ### Theorem 2' (Maximum)
 
