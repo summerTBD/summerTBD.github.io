@@ -118,10 +118,10 @@ $$
 
 #### 证明概要
 
-设 $\mathbf{x}^\ast = (x_1^\ast, x_2^\ast, \dots, x_n^\ast)$ 是 $F$ 的一个全局极小值点，极小值为 $m$。考虑所有坐标置换得到的点：
+设 $\mathbf{x}^{(0)} = (x_1^{(0)}, x_2^{(0)}, \dots, x_n^{(0)})$ 是 $F$ 的一个全局极小值点，极小值为 $m$。考虑所有坐标置换得到的点：
 
 $$
-\mathbf{x}_\sigma = (x_{\sigma(1)}^\ast, x_{\sigma(2)}^\ast, \dots, x_{\sigma(n)}^\ast), \quad \sigma \in S_n.
+\mathbf{x}_\sigma = (x_{\sigma(1)}^{(0)}, x_{\sigma(2)}^{(0)}, \dots, x_{\sigma(n)}^{(0)}), \quad \sigma \in S_n.
 $$
 
 由对称性，每个 $\mathbf{x}_\sigma$ 都是极小值点，函数值均为 $m$。凸函数的极小值点集是凸集，故这些点的算术平均
@@ -133,10 +133,10 @@ $$
 仍为极小值点。容易验证该平均点的所有坐标相等，均等于原始坐标的算术平均：
 
 $$
-\left( \frac{1}{n} \sum_{i=1}^n x_i^\ast,\; \frac{1}{n} \sum_{i=1}^n x_i^\ast,\; \dots,\; \frac{1}{n} \sum_{i=1}^n x_i^\ast \right).
+\left( \frac{1}{n} \sum_{i=1}^n x_i^{(0)},\; \frac{1}{n} \sum_{i=1}^n x_i^{(0)},\; \dots,\; \frac{1}{n} \sum_{i=1}^n x_i^{(0)} \right).
 $$
 
-因此存在 $t = \frac{1}{n} \sum_{i=1}^n x_i^\ast$ 使对角线点 $(t, t, \dots, t)$ 为极小值点。$\square$
+因此存在 $t = \frac{1}{n} \sum_{i=1}^n x_i^{(0)}$ 使对角线点 $(t, t, \dots, t)$ 为极小值点。$\square$
 
 ### 定理 2'（极大值）
 
