@@ -32,6 +32,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Preprocess LaTeX math delimiters
+        run: |
+          chmod +x ./scripts/fix-math-delimiters.sh
+          ./scripts/fix-math-delimiters.sh
+
       - name: Build site
         run: bundle exec jekyll build -d "_site${{ steps.pages.outputs.base_path }}"
         env:
