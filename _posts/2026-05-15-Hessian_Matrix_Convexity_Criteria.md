@@ -213,52 +213,52 @@ $$
 
 ### 9.1 特征值判别法与二次型
 对于海森矩阵 \(\mathbf{H}\)（实对称），我们关心二次型  
-\[
+$$
 \mathbf{v}^\mathsf{T} \mathbf{H} \mathbf{v}
-\]
+$$
 的符号，以判断函数的凹凸性。  
 通过求解 **特征方程**  
-\[
+$$
 \det(\mathbf{H} - \lambda \mathbf{I}) = 0
-\]
+$$
 得到特征值 \(\lambda_1, \lambda_2, \dots, \lambda_n\)，二次型可以写成  
-\[
+$$
 \mathbf{v}^\mathsf{T} \mathbf{H} \mathbf{v} = \sum_{i=1}^n \lambda_i y_i^2,
-\]
+$$
 其中 \(y_i\) 是 \(\mathbf{v}\) 在特征向量坐标系下的坐标。因此：
 - 所有 \(\lambda_i \ge 0\) \(\Leftrightarrow\) 矩阵半正定（函数凸）
 - 所有 \(\lambda_i \le 0\) \(\Leftrightarrow\) 矩阵半负定（函数凹）
 
 ### 9.2 谱分解的完整形式
 对称矩阵 \(\mathbf{H}\) 可以 **正交对角化**：存在正交矩阵 \(\mathbf{Q}\)（满足 \(\mathbf{Q}^{-1} = \mathbf{Q}^\mathsf{T}\)）和对角矩阵 \(\mathbf{\Lambda} = \operatorname{diag}(\lambda_1, \dots, \lambda_n)\)，使得  
-\[
+$$
 \mathbf{H} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^\mathsf{T}. \tag{1}
-\]
+$$
 这就是 **谱分解**（spectral decomposition）。  
 \(\mathbf{Q}\) 的列是 \(\mathbf{H}\) 的单位正交特征向量，\(\mathbf{\Lambda}\) 的对角元是对应的特征值。
 
 ### 9.3 转置怎么变逆的？
 关键就藏在"正交矩阵"的定义里：  
-\[
+$$
 \mathbf{Q}^\mathsf{T} \mathbf{Q} = \mathbf{I} \quad \Rightarrow \quad \mathbf{Q}^\mathsf{T} = \mathbf{Q}^{-1}.
-\]
+$$
 正因为对称矩阵的特征向量可以选为正交归一，变换矩阵 \(\mathbf{Q}\) 的逆恰好等于它的转置。  
 于是 (1) 式可以等价地写成 **逆** 的形式：
-\[
+$$
 \mathbf{H} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^{-1}. \tag{2}
-\]
+$$
 现在它看起来就再熟悉不过了——**前后各乘一个矩阵和它的逆**。
 
 ### 9.4 这就是矩阵代数里的"共轭"
 在线性代数中，对任意方阵 \(\mathbf{A}\)，变换  
-\[
+$$
 \mathbf{A} \longmapsto \mathbf{P} \mathbf{A} \mathbf{P}^{-1}
-\]
+$$
 称为 **相似变换**。  
 如果把全体可逆矩阵看成一个群（一般线性群 \(GL_n\)），这个操作正是 **群作用下的共轭**：  
-\[
+$$
 \text{群共轭：} \quad g a g^{-1} \qquad \longleftrightarrow \qquad \text{矩阵相似：} \quad \mathbf{P} \mathbf{A} \mathbf{P}^{-1}.
-\]
+$$
 谱分解 (2) 式就是 **用一个正交矩阵 \(\mathbf{Q}\) 将 \(\mathbf{\Lambda}\) 共轭成了 \(\mathbf{H}\)**。
 
 因为 \(\mathbf{Q}\) 恰好是正交的，它的逆又可以写成转置，所以教材上常用 \(\mathbf{Q}^\mathsf{T}\) 这种"计算友好"的形式，反而掩盖了它作为共轭的本质。
