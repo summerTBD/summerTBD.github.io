@@ -19,12 +19,12 @@ MathJax 的 JavaScript，需要手动注入。
         },
         options: {
             ignoreHtmlClass: 'no-mathjax',
-            processHtmlClass: 'math'
+            processHtmlClass: ''
         },
-        svg: {
+        chtml: {
             fontCache: 'global'
         }
     };
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
 {% endif %}
