@@ -28,3 +28,26 @@ MathJax 的 JavaScript，需要手动注入。
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
 {% endif %}
+
+<!-- 将侧边栏（目录TOC + 作者信息）从右侧移动到左侧 -->
+<style>
+    @media (min-width: 1024px) {
+
+        /* 反转页面flex布局，让侧边栏显示在左边，内容显示在右边 */
+        .page {
+            flex-direction: row-reverse;
+        }
+
+        /* 调整侧边栏的间距 */
+        .sidebar {
+            margin-left: 0;
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        /* 保持主要内容区域的间距正常 */
+        .page__content {
+            padding-left: 20px;
+        }
+    }
+</style>
