@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "《"因为它们长得不一样"——a·k+b 哈希唯一性的优雅证明》"
-date: 2026-05-22
+date: 2026-05-29
 author: summerTBD
 categories: [数学, 算法]
 tags: [多项式, 哈希]
