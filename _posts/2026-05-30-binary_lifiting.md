@@ -28,7 +28,7 @@ toc_sticky: true
 
 ## 例题
 
-[AcWing 109 - Genius ACM](https://www.acwing.com/problem/content/109/)
+[AcWing 109 - Genius ACM](https://www.acwing.com/problem/content/111/)
 
 给定一个整数 $M$，对于任意一个整数集合 $S$，定义"校验值"如下：
 
