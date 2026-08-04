@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Feelings of Making an App"
+title: "farmpiggie_and_Subset_Sum"
 date: 2026-08-04 00:00:00 +0800
 author: summerTBD
 categories: [数学，算法]
